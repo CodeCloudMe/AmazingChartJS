@@ -1,0 +1,76 @@
+<html>
+<head>
+
+	<script src="amazingJS/jquery.js"></script>
+	<script src="amazingJS/highcharts.js"></script>
+	<script src="amazingJS/exampleData.js"></script>
+	<script src= "amazingJS/amazingChart.js"></script>
+
+	<script>
+
+		$(window).load(function(){
+
+			glintsExample();
+		})
+
+		function glintsExample(){
+
+
+			//timeout is a simulation of new data coming in or ajax complete function
+			setTimeout(function(){
+
+				//exData1 is new data
+				c.source(exData1, 'users');
+			}, 3000);
+
+
+			c = new amazingChart();
+
+			c.color('green', 'users');
+
+			c.thickness(2, 'users')
+
+
+			c.source(exData, 'users');
+
+
+			c.render('#example');
+
+			c.interval(1000);
+
+
+
+
+			c.on('new', function(data){
+				//console.log('new data')
+				//alert('new data')
+				console.log(data);
+
+			})
+
+
+
+
+
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+
+	<div id="example" style="height:500px; width:100%; background-color:blue">
+
+
+
+	</div>
+
+</body>
+
+
+	
+
+
+</html>
