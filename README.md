@@ -18,11 +18,14 @@ Draw the chart to an element on the page: `c.render('#example');`
 
 Set an interval to check for updates or new source method calls: `c.interval(1000);`
 
-Add an event listener to get new data and set your own callback to do something: `c.on('new', function(data){
+Add an event listener to get new data and set your own callback to do something: `
+			c.on('new', function(data){
 				
 				console.log(data);
 
-			})`
+			})
+
+			`
 
 ## Contributing
 
